@@ -3,7 +3,7 @@ import streamlit as st
 # --- CONFIGURATION ---
 # Set the page configuration for a wide, clean, and educational focus
 st.set_page_config(
-    page_title="Treasury Transformation: Data Science for the Treasury Professional", 
+    page_title="Data Science for the Treasury Professional", 
     page_icon="🤖",  # Robot icon for automation and efficiency
     layout="wide",
     initial_sidebar_state="expanded"
@@ -146,7 +146,7 @@ with col1:
     st.write(
         """
         This platform is dedicated to teaching front and back office professionals 
-        how to leverage tools like the Power Platforms, Excel and the TMS to eliminate manual work, 
+        how to leverage tools like Power Platforms, Excel and Treasury Managment Systems to eliminate manual work, 
         accelerate financial closings, and enhance decision-making.
         """
     )
@@ -180,9 +180,9 @@ with path_col2:
     st.info("##### ⚙️ Process Automation (Power Automate)")
     st.markdown(
         """
-        - **RPA for Back Office:** Automating daily liquidity reporting and TMS data entry.
-        - **Workflow Design:** Building approval flows for payments and guarantee requests.
-        - **Email Handling:** Automatically extracting payment confirmations and saving them to SharePoint.
+        - **For Back Office:** Automating cash flow forecasting.
+        - **Workflow Design:** Building approval flows.
+        - **Email Handling:** Automatically email data and saving to SharePoint.
         """
     )
 
@@ -190,9 +190,9 @@ with path_col3:
     st.info("##### 📊 Insightful Reporting (Power BI)")
     st.markdown(
         """
-        - **Dashboard Design:** Creating intuitive, drill-down dashboards for cash visibility.
-        - **DAX Measures:** Implementing custom measures for calculating WACC, VaR, and covenant ratios.
-        - **Executive Summaries:** Presenting complex risk metrics clearly to management.
+        - **Dashboard Design** 
+        - **DAX Measures** 
+        - **Data Flow Builds** 
         """
     )
 
@@ -214,6 +214,7 @@ with st.form(key='contact_form'):
     if submit_button:
         # Placeholder success message (integration needed for a real email service)
         st.success(f"Thank you, {user_name}! Your consultation request has been received and we will be in touch shortly.")
+
 
 
 
