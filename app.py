@@ -171,8 +171,8 @@ with path_col1:
     st.info("##### 🐍 Data Manipulation & Cleanup")
     st.markdown(
         """
-        - **Advanced Excel:** Using Power Query for dynamic data ingestion and transformation.
-        - **Data Cleaning:** Standardizing counterparty names and transaction codes.
+        - **Advanced Excel:** Using Power Query for dynamic data implementation.
+        - **Data Cleaning:** Standardizing static data.
         """
     )
 
@@ -182,7 +182,7 @@ with path_col2:
         """
         - **For Back Office:** Automating cash flow forecasting.
         - **Workflow Design:** Building approval flows.
-        - **Email Handling:** Automatically email data and saving to SharePoint.
+        - **Email Handling:** Automatically export email data and save to SharePoint.
         """
     )
 
@@ -214,6 +214,7 @@ with st.form(key='contact_form'):
     if submit_button:
         # Placeholder success message (integration needed for a real email service)
         st.success(f"Thank you, {user_name}! Your consultation request has been received and we will be in touch shortly.")
+
 
 
 
