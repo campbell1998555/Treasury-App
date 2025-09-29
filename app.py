@@ -105,12 +105,12 @@ st.markdown(f'<style>{css}</style>', unsafe_allow_html=True)
 
 # --- SIDEBAR CONTENT: NAVIGATION, IMAGE & RESOURCES ---
 with st.sidebar:
-    # 1. Professional Sidebar Image (Replaces main body image)
+    # 1. Professional Sidebar Image (Using the original image, styled with shadow)
     st.markdown('<div class="sidebar-img">', unsafe_allow_html=True)
-    # Placeholder for a professional, abstract tech image
     st.image(
-        "https://images.pexels.com/photos/3861958/pexels-photo-3861958.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        caption="Data Driven Treasury",
+        "https://images.pexels.com/photos/1018635/pexels-photo-1018635.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        caption="",
+        width=300
     )
     st.markdown('</div>', unsafe_allow_html=True)
 
@@ -119,39 +119,44 @@ with st.sidebar:
     st.title("Navigation")
     st.markdown('<div style="border-top: 1px solid white;"></div>', unsafe_allow_html=True) # White separator on dark background
     
-    st.markdown("##### 🧭 Learning Paths")
-    st.markdown("- Excel Mastery (Power Query)")
-    st.markdown("- Power Platforms (Automation)")
-    st.markdown("- TMS Integration & Optimization")
+    st.markdown("##### Learning Paths")
+    # Simplified paths (Original Content)
+    st.markdown("Excel")
+    st.markdown("Power Platforms")
+    st.markdown("Treasury Management System")
     st.markdown('<div style="border-top: 1px solid white;"></div>', unsafe_allow_html=True)
     
-    st.markdown("##### 📚 Resources")
-    st.markdown("- [Power BI Report Templates](#)")
-    st.markdown("- [Power Automate Templates](#)")
-    st.markdown("- [XML Templates for TMS Import](#)")
+    st.markdown("##### Resources")
+    # Updated resource links (Original Content)
+    st.markdown("- [Power BI Report Templates for Back Office and Front Office](#)")
+    st.markdown("- [Power Automate Templates for Treasury Professionals](#)")
+    st.markdown("- [XML Templates using Excel for TMS Import](#)")
     st.markdown('<div style="border-top: 1px solid white;"></div>', unsafe_allow_html=True)
-    st.markdown("Connect with Jamie on [LinkedIn](https://www.linkedin.com/)")
 
 
 # --- MAIN PAGE CONTENT: HEADER & MISSION ---
 
 st.header("Treasury Transformation: Data Efficiency and the Power Platform")
 
-# 1. MISSION STATEMENT SECTION (Now Full Width on the Left)
-st.subheader("Empowering Treasury Teams through Data Mastery and Automation")
-st.write(
-    """
-    The financial landscape demands more than traditional treasury skill—it requires **data fluency** and **process automation**. 
-    This platform provides targeted training for front and back office professionals, focusing on practical application 
-    of the Power Platforms, Advanced Excel, and TMS integration techniques.
+# 1. MISSION STATEMENT SECTION (Reverting to original 3:1 layout)
+col1, col2 = st.columns([3, 1])
 
-    Our goal is simple: to eliminate cumbersome manual work, significantly accelerate financial closings, and 
-    foster a truly data-driven approach to liquidity and risk management.
-    
-    **Stop manipulating data; start analyzing it.**
-    """
-)
-st.button("Start Your Treasury Journey")
+with col1:
+    st.subheader("Empowering Treasury Teams through Data Mastery and Automation")
+    st.write(
+        """
+        This platform is dedicated to teaching front and back office professionals 
+        how to leverage tools like the Power Platforms, Excel and the TMS to eliminate manual work, 
+        accelerate financial closings, and enhance decision-making.
+        """
+    )
+    # Updated button text
+    st.button("Start Your Treasury Journey")
+
+with col2:
+    # Imagery is now in the sidebar, but maintaining the original column structure if content is added later.
+    # We will keep this column empty for now, as the image was moved to the sidebar for better design.
+    pass
 
 
 st.markdown('<div class="divider"></div>', unsafe_allow_html=True)
@@ -163,12 +168,11 @@ st.markdown("### Key Learning Paths for Treasury Professionals")
 path_col1, path_col2, path_col3 = st.columns(3)
 
 with path_col1:
-    st.info("##### 🛠️ Data Manipulation & Cleanup")
+    st.info("##### 🐍 Data Manipulation & Cleanup")
     st.markdown(
         """
         - **Advanced Excel:** Using Power Query for dynamic data ingestion and transformation.
-        - **Python/Pandas:** Foundational scripting for large-scale data cleansing and reconciliation.
-        - **Data Governance:** Standardizing static data, counterparty names, and transaction codes.
+        - **Data Cleaning:** Standardizing counterparty names and transaction codes.
         """
     )
 
@@ -177,7 +181,7 @@ with path_col2:
     st.markdown(
         """
         - **RPA for Back Office:** Automating daily liquidity reporting and TMS data entry.
-        - **Workflow Design:** Building secure approval flows for payments and guarantee requests.
+        - **Workflow Design:** Building approval flows for payments and guarantee requests.
         - **Email Handling:** Automatically extracting payment confirmations and saving them to SharePoint.
         """
     )
@@ -187,8 +191,8 @@ with path_col3:
     st.markdown(
         """
         - **Dashboard Design:** Creating intuitive, drill-down dashboards for cash visibility.
-        - **DAX Measures:** Implementing custom measures for calculating risk and yield metrics.
-        - **System Checks:** Building dashboards for continuous monitoring of TMS data integrity.
+        - **DAX Measures:** Implementing custom measures for calculating WACC, VaR, and covenant ratios.
+        - **Executive Summaries:** Presenting complex risk metrics clearly to management.
         """
     )
 
@@ -201,7 +205,7 @@ st.write("Have specific questions about Power Platform implementation or data go
 
 # Simple contact form simulation (Streamlit form functionality)
 with st.form(key='contact_form'):
-    st.markdown("#### Schedule a Consultation")
+    st.markdown("#### Schedule a Consultation") # Added header for better form structure
     user_name = st.text_input("Your Name", placeholder="Jamie")
     user_email = st.text_input("Your Professional Email", placeholder="jamie@example.com")
     message = st.text_area("Your Specific Automation/Data Query", placeholder="I need help automating my monthly debt schedule...")
@@ -210,10 +214,6 @@ with st.form(key='contact_form'):
     if submit_button:
         # Placeholder success message (integration needed for a real email service)
         st.success(f"Thank you, {user_name}! Your consultation request has been received and we will be in touch shortly.")
-
-st.markdown('---')
-st.markdown(f'<p style="text-align: center; color: #666;">A Treasury Resource (2025) | Powered by Streamlit</p>', unsafe_allow_html=True)
-
 
 
 
